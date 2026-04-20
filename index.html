@@ -1,33 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Моє CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Максима Малиша — студент Львівської політехніки">
+    <title>Максим Малиш | CV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1>Моє резюме</h1>
+<header>
+    <button id="themeToggle" style="position: absolute; top: 20px; right: 20px; padding: 8px 15px; cursor: pointer; border-radius: 8px; border: 1px solid #fff; background: rgba(255,255,255,0.1); color: #fff; font-family: inherit;">
+        Змінити тему 🌓
+    </button>
+    <h1>Максим Малиш</h1>
+    <p><strong>Студент кібербезпеки | Початківець Frontend Developer</strong></p>
+    <nav>
+        <a href="#profile">Про мене</a>
+        <a href="#education">Освіта</a>
+        <a href="#skills">Навички</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+</header>
 
-<h2>Особиста інформація</h2>
-<p>Ім'я: Максим Малиш</p>
-<p>Місто: Львів</p>
-<p>Email: maksummalush09@gmail.com</p>
-<p>Телефон: 0983850489</p>
+<main id="main-content">
+    <section id="profile">
+        <h2>Про мене</h2>
+        <p>Я студент <strong>Львівської політехніки</strong>, який вивчає <strong>кібербезпеку та веб-розробку</strong>.</p>
+        <p>Моя мета — розвиватися у сфері IT та брати участь у реальних проектах.</p>
+    </section>
 
-<h2>Освіта</h2>
-<p>Львівська політехніка</p>
+    <section id="education">
+        <h2>Освіта</h2>
+        <article>
+            <h3>Національний університет "Львівська політехніка"</h3>
+            <p>Спеціальність: Кібербезпека</p>
+            <p><time datetime="2024">2024</time> — <time datetime="2028">2028</time></p>
+        </article>
+    </section>
 
-<h2>Навички HTML</h2>
-<ul>
-<li>Базова структура HTML</li>
-<li>Теги заголовків</li>
-<li>Теги списків</li>
-<li>Теги параграфів</li>
-</ul>
+    <section id="skills">
+        <h2>Навички</h2>
+        <table>
+            <thead>
+                <tr><th>Категорія</th><th>Навички</th><th>Рівень</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>HTML</td><td>Структура, теги, таблиці</td><td><meter value="4" min="0" max="5"></meter></td></tr>
+                <tr><td>Python</td><td>Базові алгоритми</td><td><meter value="3" min="0" max="5"></meter></td></tr>
+            </tbody>
+        </table>
+    </section>
 
-<h2>Досвід</h2>
-<p>Початківець у веб-розробці. Вивчаю HTML.</p>
+    <section id="contact">
+        <h2>Контакти</h2>
+        <ul>
+            <li>Email: <a href="mailto:maksummalush09@gmail.com">maksummalush09@gmail.com</a></li>
+            <li>Телефон: 0983850489</li>
+            <li>Місто: Львів, Україна</li>
+        </ul>
+    </section>
+</main>
 
+<footer>
+    <p>© 2026 Максим Малиш — Лабораторна робота №4 (JS)</p>
+</footer>
+
+<div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; backdrop-filter: blur(5px);">
+    <div style="background:#fff; color:#000; width:90%; max-width:400px; margin:100px auto; padding:30px; border-radius:20px;">
+        <h3 style="margin-bottom: 20px;">Зворотній зв'язок</h3>
+        <form action="https://formspree.io/f/xjgpbbjw" method="POST">
+            <input type="text" name="name" placeholder="Ваше ім'я" required style="width:100%; margin-bottom:10px; padding:10px; border:1px solid #ccc; border-radius:8px;">
+            <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:10px; padding:10px; border:1px solid #ccc; border-radius:8px;">
+            <input type="tel" name="phone" placeholder="Телефон" required style="width:100%; margin-bottom:10px; padding:10px; border:1px solid #ccc; border-radius:8px;">
+            <textarea name="message" placeholder="Повідомлення" rows="4" style="width:100%; margin-bottom:10px; padding:10px; border:1px solid #ccc; border-radius:8px;"></textarea>
+            <button type="submit" style="width:100%; padding:12px; background:#000; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:700;">Відправити</button>
+        </form>
+        <button onclick="document.getElementById('modal').style.display='none'" style="width:100%; margin-top:10px; background:none; border:none; text-decoration:underline; cursor:pointer;">Закрити</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
